@@ -12,10 +12,12 @@
     <img v-bind:src="img" v-bind:alt="name">
     <h1>
       {{name}}
-      <span v-if="changePercent > 0">👍</span>
+      <!-- esto se usaría para las veces que no se va a modifiar ni cambiar por un tiempo -->
+      <span v-if="changePercent > 0">👍</span>  
       <span v-else-if="changePercent < 0">👎</span>
       <span v-else>🤞</span>
 
+      <!-- esto se usaría paramodificar la modificar la prop display de css para mostralo u ocultarlo por ejemplo, y así evitaríamos mutaciones en el DOM -->
       <span v-show="changePercent > 0">👍</span>
       <span v-show="changePercent < 0">👎</span>
       <span v-show="changePercent == 0">🤞</span>
