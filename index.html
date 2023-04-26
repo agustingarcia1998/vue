@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div id="app" v-bind:style="{ background: '#' + color }">
+    <!-- con el id 'app' conecto con el archivo app.js -->
+    <div id="app" v-bind:style="{ background: '#' + color }"> 
       <img
         v-on:mouseover="toggleShowPrices"
         v-on:mouseOut="toggleShowPrices"
@@ -29,6 +30,9 @@
       <span v-show="changePercent < 0">👎</span>
       <span v-show="changePercent == 0">🤞</span> -->
       </h1>
+
+      <input type = "number" v-model="value">
+      <span>{{ convertedValue }}</span>
 
       <ul v-show="showPrices">
         <li
