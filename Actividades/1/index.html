@@ -18,11 +18,13 @@
     <div v-show="courses.length">
       <ol>
         <li v-for="c in courses"> <span>{{ c.title }} - {{ c.time }}hs.</span></li>
+        <!-- Mostrar la lista de cursos tomados, con el titulo de los mismos y las horas de cada uno usando v-for -->
       </ol>
       <hr/>
       <p>
         Llevo <strong>{{ totalTime }}</strong> horas aprendiendo en Platzi.
-        <b>Es difícil vue</b>
+        <!-- Mostrar el total de horas con totalTime, en caso que no existan cursos se debe mostrar un mensaje indicandolo. -->
+        <b>Seguimos con vue</b>
       </p>
     </div>
   </div>
